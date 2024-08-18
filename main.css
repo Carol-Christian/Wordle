@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(33, 33, 33);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(5, 75px);
+    grid-template-rows: repeat(6, 75px);
+    gap: 8px;
+}
+
+.letter {
+    border: solid 2px rgb(226, 226, 226);
+    border-radius: 5px;
+    background-color: rgb(61, 61, 61);
+    font-family: Helvetica;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5 ease-in-out;
+    perspective: 1000px;
+}
+.changeColor {
+    animation: check 0.5s forwards
+}
+
+h1 {
+    font-size: 40px;
+}
+
+@keyframes check {
+  0% {
+    transform: rotateX(0deg);
+    background-color:rgb(77, 77, 77); 
+}
+50% {
+    transform: rotateX(90deg);
+    background-color:rgb(77, 77, 77);   
+}
+100% {
+    transform: rotateX(0deg);
+}}
